@@ -55,6 +55,22 @@ export async function createPartner(data: Omit<Partner, 'created_at'>): Promise<
   return rows[0] as Partner;
 }
 
+export async function updatePartner(id: string, data: Partial<Omit<Partner, 'id' | 'created_at'>>): Promise<Partner> {
+  await ensureTable();
+  const sql = getDb();
+  const rows = await sql`
+    UPDATE partners
+    SET
+      name     = COALESCE(${data.name ?? null}, name),
+      furigana = COALESCE(${data.furigana ?? null}, furigana),
+      email    = COALESCE(${data.email ?? null}, email),
+      phone    = COALESCE(${data.phone ?? null}, phone)
+    WHERE id = ${id}
+    RETURNING *
+  `;
+  return rows[0] as Partner;
+}
+
 export async function deletePartner(id: string): Promise<void> {
   await ensureTable();
   const sql = getDb();
