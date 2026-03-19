@@ -29,7 +29,8 @@ export default function NewPartnerPage() {
     }
 
     const partner = await res.json();
-    router.push(`/card/${partner.id}`);
+    window.open(`/card/${partner.id}`, '_blank');
+    router.push('/admin');
   }
 
   return (
