@@ -84,15 +84,10 @@ export default function CardView({ partner }: Props) {
         {/* Teal accent bar */}
         <div className="absolute top-0 left-0 right-0 h-1" style={{ background: '#4E8C8C' }} />
 
-        {/* Teal dot decoration */}
-        <div
-          className="absolute"
-          style={{ top: 24, right: 28, width: 10, height: 10, borderRadius: '50%', background: '#4E8C8C' }}
-        />
-
         {/* Logo */}
         <div className="absolute" style={{ top: 32, left: 36 }}>
-          <CardLogo />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/moom-logo.svg" alt="MOOM" style={{ height: 18 }} />
         </div>
 
         {/* Name block */}
@@ -203,22 +198,5 @@ export default function CardView({ partner }: Props) {
       {/* Footer */}
       <p className="mt-10 text-xs text-gray-300 tracking-widest uppercase">MOOM</p>
     </div>
-  );
-}
-
-function CardLogo() {
-  return (
-    <svg width="64" height="22" viewBox="0 0 200 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="20" width="10" height="40" rx="5" fill="#1A1A1A"/>
-      <path d="M10 20 Q25 50 32 20" stroke="#1A1A1A" strokeWidth="10" fill="none" strokeLinecap="round"/>
-      <path d="M32 20 Q39 50 54 20" stroke="#1A1A1A" strokeWidth="10" fill="none" strokeLinecap="round"/>
-      <rect x="44" y="20" width="10" height="40" rx="5" fill="#1A1A1A"/>
-      <ellipse cx="86" cy="40" rx="18" ry="18" stroke="#1A1A1A" strokeWidth="10" fill="none"/>
-      <ellipse cx="134" cy="40" rx="18" ry="18" stroke="#1A1A1A" strokeWidth="10" fill="none"/>
-      <rect x="162" y="20" width="10" height="40" rx="5" fill="#1A1A1A"/>
-      <path d="M162 20 Q172 50 182 20" stroke="#1A1A1A" strokeWidth="10" fill="none" strokeLinecap="round"/>
-      <rect x="182" y="20" width="10" height="40" rx="5" fill="#1A1A1A"/>
-      <circle cx="196" cy="14" r="7" fill="#4E8C8C"/>
-    </svg>
   );
 }
