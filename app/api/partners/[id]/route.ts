@@ -3,7 +3,7 @@ import { getPartner, deletePartner } from '@/lib/db';
 
 export async function GET(_req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const partner = getPartner(id);
+  const partner = await getPartner(id);
   if (!partner) {
     return NextResponse.json({ error: 'Partner not found' }, { status: 404 });
   }
@@ -12,10 +12,10 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ id:
 
 export async function DELETE(_req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const partner = getPartner(id);
+  const partner = await getPartner(id);
   if (!partner) {
     return NextResponse.json({ error: 'Partner not found' }, { status: 404 });
   }
-  deletePartner(id);
+  await deletePartner(id);
   return NextResponse.json({ success: true });
 }

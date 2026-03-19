@@ -4,7 +4,7 @@ import CardView from './CardView';
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const partner = getPartner(id);
+  const partner = await getPartner(id);
   if (!partner) return { title: 'Not Found' };
   return {
     title: `${partner.name} | MOOM`,
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
 export default async function CardPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const partner = getPartner(id);
+  const partner = await getPartner(id);
   if (!partner) notFound();
 
   return <CardView partner={partner} />;
