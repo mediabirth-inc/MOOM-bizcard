@@ -134,7 +134,7 @@ export default function NewPartnerPage() {
 
 function MoomLogo() {
   return (
-    <svg width="80" height="28" viewBox="0 0 200 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="92" height="28" viewBox="0 0 230 70" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="0" y="20" width="10" height="40" rx="5" fill="#1A1A1A"/>
       <path d="M10 20 Q25 50 32 20" stroke="#1A1A1A" strokeWidth="10" fill="none" strokeLinecap="round"/>
       <path d="M32 20 Q39 50 54 20" stroke="#1A1A1A" strokeWidth="10" fill="none" strokeLinecap="round"/>
@@ -142,9 +142,10 @@ function MoomLogo() {
       <ellipse cx="86" cy="40" rx="18" ry="18" stroke="#1A1A1A" strokeWidth="10" fill="none"/>
       <ellipse cx="134" cy="40" rx="18" ry="18" stroke="#1A1A1A" strokeWidth="10" fill="none"/>
       <rect x="162" y="20" width="10" height="40" rx="5" fill="#1A1A1A"/>
-      <path d="M162 20 Q172 50 182 20" stroke="#1A1A1A" strokeWidth="10" fill="none" strokeLinecap="round"/>
-      <rect x="182" y="20" width="10" height="40" rx="5" fill="#1A1A1A"/>
-      <circle cx="196" cy="14" r="7" fill="#4E8C8C"/>
+      <path d="M172 20 Q187 50 194 20" stroke="#1A1A1A" strokeWidth="10" fill="none" strokeLinecap="round"/>
+      <path d="M194 20 Q201 50 206 20" stroke="#1A1A1A" strokeWidth="10" fill="none" strokeLinecap="round"/>
+      <rect x="206" y="20" width="10" height="40" rx="5" fill="#1A1A1A"/>
+      <circle cx="222" cy="14" r="7" fill="#4E8C8C"/>
     </svg>
   );
 }
