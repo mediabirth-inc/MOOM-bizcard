@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F8F8F7;
+  --foreground: #1A1A1A;
+  --moom-teal: #4E8C8C;
+  --moom-gray: #ABABAB;
+  --moom-black: #1A1A1A;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
