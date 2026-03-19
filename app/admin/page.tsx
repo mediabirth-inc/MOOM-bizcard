@@ -39,12 +39,13 @@ export default function AdminPage() {
       {/* Sidebar */}
       <aside
         className="fixed top-0 left-0 h-full flex flex-col"
-        style={{ width: 240, background: '#1A1A1A', zIndex: 10 }}
+        style={{ width: 240, background: '#ffffff', borderRight: '1px solid #E5E4E0', zIndex: 10 }}
       >
         <div className="flex flex-col flex-1 px-8 py-10">
           {/* Logo */}
           <div className="mb-12">
-            <MoomLogoWhite />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/moom-logo.svg" alt="MOOM" style={{ height: 28 }} />
             <span
               className="block mt-2 text-[10px] tracking-[0.3em] uppercase"
               style={{ color: '#4E8C8C' }}
@@ -57,12 +58,12 @@ export default function AdminPage() {
           <nav className="flex-1">
             <div
               className="flex items-center gap-3 px-4 py-3 rounded-xl"
-              style={{ background: '#ffffff0f' }}
+              style={{ background: '#F0EFED' }}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#4E8C8C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              <span className="text-sm font-medium" style={{ color: '#ffffff' }}>パートナー一覧</span>
+              <span className="text-sm font-medium" style={{ color: '#1A1A1A' }}>パートナー一覧</span>
             </div>
           </nav>
 
@@ -70,10 +71,10 @@ export default function AdminPage() {
           {!loading && (
             <div
               className="mt-auto px-4 py-3 rounded-xl text-center"
-              style={{ background: '#ffffff08', border: '1px solid #ffffff10' }}
+              style={{ background: '#F0EFED' }}
             >
               <span className="block text-3xl font-light" style={{ color: '#4E8C8C' }}>{partners.length}</span>
-              <span className="block text-[11px] mt-0.5" style={{ color: '#666' }}>登録済みパートナー</span>
+              <span className="block text-[11px] mt-0.5" style={{ color: '#ABABAB' }}>登録済みパートナー</span>
             </div>
           )}
         </div>
@@ -134,7 +135,6 @@ export default function AdminPage() {
                   style={{ border: '1px solid #E5E4E0' }}
                 >
                   <div className="flex items-center gap-4">
-                    {/* Index + avatar */}
                     <div className="flex items-center gap-3">
                       <span className="text-xs w-5 text-right" style={{ color: '#CCCCCC' }}>{i + 1}</span>
                       <div
@@ -181,7 +181,7 @@ export default function AdminPage() {
                     <button
                       onClick={() => handleDelete(partner.id)}
                       disabled={deleteId === partner.id}
-                      className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full transition-colors hover:bg-red-50 hover:border-red-100"
+                      className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full transition-colors hover:bg-red-50"
                       style={{ border: '1px solid #E5E4E0', color: '#CCCCCC' }}
                     >
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
@@ -198,23 +198,5 @@ export default function AdminPage() {
         </main>
       </div>
     </div>
-  );
-}
-
-function MoomLogoWhite() {
-  return (
-    <svg width="92" height="28" viewBox="0 0 230 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="20" width="10" height="40" rx="5" fill="#ffffff"/>
-      <path d="M10 20 Q25 50 32 20" stroke="#ffffff" strokeWidth="10" fill="none" strokeLinecap="round"/>
-      <path d="M32 20 Q39 50 54 20" stroke="#ffffff" strokeWidth="10" fill="none" strokeLinecap="round"/>
-      <rect x="44" y="20" width="10" height="40" rx="5" fill="#ffffff"/>
-      <ellipse cx="86" cy="40" rx="18" ry="18" stroke="#ffffff" strokeWidth="10" fill="none"/>
-      <ellipse cx="134" cy="40" rx="18" ry="18" stroke="#ffffff" strokeWidth="10" fill="none"/>
-      <rect x="162" y="20" width="10" height="40" rx="5" fill="#ffffff"/>
-      <path d="M172 20 Q187 50 194 20" stroke="#ffffff" strokeWidth="10" fill="none" strokeLinecap="round"/>
-      <path d="M194 20 Q201 50 206 20" stroke="#ffffff" strokeWidth="10" fill="none" strokeLinecap="round"/>
-      <rect x="206" y="20" width="10" height="40" rx="5" fill="#ffffff"/>
-      <circle cx="222" cy="14" r="7" fill="#4E8C8C"/>
-    </svg>
   );
 }
