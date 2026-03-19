@@ -56,6 +56,7 @@ export default function CardView({ partner }: Props) {
       `EMAIL:${partner.email}`,
       `TEL:${partner.phone}`,
       'ORG:MOOM',
+      'URL:https://moom.jp/',
       'END:VCARD',
     ].join('\r\n');
 
@@ -114,6 +115,10 @@ export default function CardView({ partner }: Props) {
           </div>
           <div className="flex items-center gap-2 justify-end">
             <span style={{ fontSize: 10, color: '#ABABAB', letterSpacing: '0.05em' }}>{partner.phone}</span>
+            <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#ABABAB', flexShrink: 0 }} />
+          </div>
+          <div className="flex items-center gap-2 justify-end">
+            <span style={{ fontSize: 10, color: '#ABABAB', letterSpacing: '0.05em' }}>moom.jp</span>
             <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#ABABAB', flexShrink: 0 }} />
           </div>
         </div>
