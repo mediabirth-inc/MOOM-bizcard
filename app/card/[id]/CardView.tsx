@@ -55,8 +55,7 @@ export default function CardView({ partner }: Props) {
       `N:${lastName};${firstName};;;`,
       `EMAIL:${partner.email}`,
       `TEL:${partner.phone}`,
-      'ORG:MOOM',
-      'URL:https://moom.jp/',
+      'ORG:株式会社エフワンコンサルティング',
       'END:VCARD',
     ].join('\r\n');
 
@@ -85,10 +84,16 @@ export default function CardView({ partner }: Props) {
         {/* Teal accent bar */}
         <div className="absolute top-0 left-0 right-0 h-1" style={{ background: '#4E8C8C' }} />
 
-        {/* Logo */}
-        <div className="absolute" style={{ top: 32, left: 36 }}>
+        {/* Logo + Company */}
+        <div className="absolute" style={{ top: 28, left: 36 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/moom-logo.svg" alt="MOOM" style={{ height: 18 }} />
+          <p className="mt-1.5 font-light" style={{ fontSize: 9, color: '#1A1A1A', letterSpacing: '0.04em' }}>
+            株式会社エフワンコンサルティング
+          </p>
+          <p className="mt-0.5 font-light" style={{ fontSize: 8, color: '#ABABAB', letterSpacing: '0.04em' }}>
+            大阪府知事免許 (1) 第65175号
+          </p>
         </div>
 
         {/* Name block */}
@@ -115,10 +120,6 @@ export default function CardView({ partner }: Props) {
           </div>
           <div className="flex items-center gap-2 justify-end">
             <span style={{ fontSize: 10, color: '#ABABAB', letterSpacing: '0.05em' }}>{partner.phone}</span>
-            <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#ABABAB', flexShrink: 0 }} />
-          </div>
-          <div className="flex items-center gap-2 justify-end">
-            <span style={{ fontSize: 10, color: '#ABABAB', letterSpacing: '0.05em' }}>moom.jp</span>
             <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#ABABAB', flexShrink: 0 }} />
           </div>
         </div>
