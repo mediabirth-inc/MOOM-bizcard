@@ -84,11 +84,15 @@ export default function CardView({ partner }: Props) {
         {/* Teal accent bar */}
         <div className="absolute top-0 left-0 right-0 h-1" style={{ background: '#4E8C8C' }} />
 
-        {/* Logo + Company */}
-        <div className="absolute" style={{ top: 28, left: 36 }}>
+        {/* Logo */}
+        <div className="absolute" style={{ top: 32, left: 36 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/moom-logo.svg" alt="MOOM" style={{ height: 18 }} />
-          <p className="mt-1.5 font-light" style={{ fontSize: 9, color: '#1A1A1A', letterSpacing: '0.04em' }}>
+        </div>
+
+        {/* Company info — top right */}
+        <div className="absolute flex flex-col items-end" style={{ top: 32, right: 36 }}>
+          <p className="font-light" style={{ fontSize: 9, color: '#1A1A1A', letterSpacing: '0.04em' }}>
             株式会社エフワンコンサルティング
           </p>
           <p className="mt-0.5 font-light" style={{ fontSize: 8, color: '#ABABAB', letterSpacing: '0.04em' }}>
